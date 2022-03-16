@@ -18,6 +18,8 @@ button {
   margin-bottom:100vmax;
 }
 .item {
+  text-align: center;
+  line-height: 100px;
   margin: 0 auto;
   width: 100px;
   height: 100px;

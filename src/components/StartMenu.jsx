@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTransition ,animated, config} from "react-spring";
 import Button from "./Button";
 
@@ -17,11 +17,18 @@ export const StartMenu = () => {
       await next({y:800,opasity:0});
     },
   });
+  useEffect(()=>{
+    setItems(v=> v.length ? []:[
+          {y:0, delay:500,out:400,className:'aaa'},
+          {y:50, delay:700,out:200},
+          {y:100, delay:900,out:0}
+        ])
+  },[])
   return (
     <div className="App">
       <button onClick={()=>{
         setItems(v=> v.length ? []:[
-          {y:0, delay:0,out:400},
+          {y:0, delay:0,out:400,className:'aaa'},
           {y:50, delay:200,out:200},
           {y:100, delay:400,out:0}
         ])
@@ -31,7 +38,7 @@ export const StartMenu = () => {
       <div className="container">
         {/* {isVisible ?<div className="item" />:''} */}
         {transiton((style,item)=>
-          item ? <animated.div style={style} className='item' />:''
+          item ? <animated.div style={style} className='item' ><animated.p style={style}>item</animated.p></animated.div>:''
         )}
       </div>
     </div>

@@ -14,16 +14,22 @@ function LoopTrue() {
 
   return (<>
     <animated.div
-      style={{
+      style={lo0op ? {
         width: 80,
         height: 80,
         backgroundColor: '#46e891',
         borderRadius: 16,
         ...styles,
-      }}
+      }
+    :{
+       width: 80,
+        height: 80,
+        backgroundColor: '#46e891',
+        borderRadius: 16,
+    }}
     />
     <button onClick={()=>{
-      setLoop(false)
+      setLoop(v => !v)
       // api.stop()
     }}>
       {lo0op ? 'true':'false'}
