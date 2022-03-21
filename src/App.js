@@ -7,15 +7,19 @@ import LoopTrue from "./components/LoopTrue";
 import { StartMenu } from "./components/StartMenu";
 import HelloAnimation from "./components/HelloAnimation";
 import TextAnimation from "./components/TextAnimation";
+import LoginPage from "./components/LoginPage";
+import FadeinProto from "./components/FadeinProto";
 
 const App = () => {
 
   return(
   <>
+  <FadeinProto/>
+  {/* <LoginPage/> */}
    {/* <Button /> */}
-   <LoopTrue/>
+   {/* <LoopTrue/>
    <TextAnimation />
-   <StartMenu/>
+   <StartMenu/> */}
    {/* <HelloAnimation /> */}
   </>
   )}

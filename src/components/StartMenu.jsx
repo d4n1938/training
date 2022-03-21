@@ -5,7 +5,7 @@ import Button from "./Button";
 
 export const StartMenu = () => {
   const [items,setItems] = useState([]);
-  const transiton = useTransition(items,{
+  const transition = useTransition(items,{
     from:{x:-100,y:800,opasity:0 ,width:20,height:20},
 
     enter:item => async(next) =>{
@@ -37,7 +37,7 @@ export const StartMenu = () => {
       </button>
       <div className="container">
         {/* {isVisible ?<div className="item" />:''} */}
-        {transiton((style,item)=>
+        {transition((style,item)=>
           item ? <animated.div style={style} className='item' ><animated.p style={style}>item</animated.p></animated.div>:''
         )}
       </div>
