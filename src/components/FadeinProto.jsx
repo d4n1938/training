@@ -6,23 +6,29 @@ import { animated , useSpring} from 'react-spring'
 export default function FadeinProto() {
 
   const animation = useSpring({
-    from: {width:0 , color:'red'},
+    from: {width:0 , color:'red', backgroundColor:'black' , margin: '0 auto'},
     to: [
-      {width:100},
+      {width:window.innerWidth , color:'red'},
       // {y:-20},
       // {y:0},
+      {height:600 , color:'green' , backgroundColor:'blue'},
+      {width:600 , color:'blue' , backgroundColor:'green'},
     ],
-    config: { duration: 1000 },
+ 
+    config: { duration: 800 },
   })
 
 
   return (
     <animated.div style={animation}>
-<Div>oubiubiu</Div>
+    <Div>
+      oubiubiu
+    </Div>
     </animated.div>
   )
 }
   const Div = styled.div`
   width: 100px;
-  background-color: black;
+  margin: 0 auto;
+  background-color: red;
   `
