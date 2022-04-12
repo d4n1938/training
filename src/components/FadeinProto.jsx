@@ -6,13 +6,13 @@ import { animated , useSpring} from 'react-spring'
 export default function FadeinProto() {
 
   const animation = useSpring({
-    from: {width:0 , color:'red', backgroundColor:'black' , margin: '0 auto'},
+    from: {width:3 ,height:0, color:'red', backgroundColor:'black' , margin: '0 auto'},
     to: [
-      {width:window.innerWidth , color:'red'},
+      // {width:window.innerWidth , color:'red'},
       // {y:-20},
       // {y:0},
       {height:600 , color:'green' , backgroundColor:'blue'},
-      {width:600 , color:'blue' , backgroundColor:'green'},
+      {width:window.innerWidth , color:'blue' , backgroundColor:'green'},
     ],
  
     config: { duration: 800 },
